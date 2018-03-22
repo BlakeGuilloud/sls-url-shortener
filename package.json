@@ -1,0 +1,11 @@
+{
+  "name": "cleanup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "mongoose": "^5.0.10",
+    "normalize-url": "^2.0.1"
+  }
+}

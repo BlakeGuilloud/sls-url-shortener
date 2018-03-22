@@ -1,0 +1,8 @@
+{
+  "pathParameters": {
+    "shortUrl": "ABC"
+  },
+  "body": {
+    "longUrl": "doggyyy.com"
+  }
+}

@@ -1,0 +1,30 @@
+service: redirect-demo
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  environment:
+    MONGODB_URI: ${file(./config.json):MONGODB_URI}
+
+functions:
+  redirect:
+    handler: handler.redirect
+    events:
+      - http:
+          path: /{shortUrl}
+          method: get
+          cors: true
+
+      - http:
+          path: ''
+          method: get
+          cors: true
+
+  generateShortUrl:
+    handler: handler.generateShortUrl
+    events:
+      - http:
+          path: generateShortUrl
+          method: post
+          cors: true
+
